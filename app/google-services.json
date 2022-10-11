@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498040872186",
+    "project_id": "lostcat-2ce0a",
+    "storage_bucket": "lostcat-2ce0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498040872186:android:a02ef0f17309ebb236fd43",
+        "android_client_info": {
+          "package_name": "com.example.mylostcatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498040872186-kd9j2jlr6ddqj0pjst30mcvbuuh37qmm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHt2qtf4SSCDr_y6RcpnrlPVp8aJx8E2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498040872186-kd9j2jlr6ddqj0pjst30mcvbuuh37qmm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

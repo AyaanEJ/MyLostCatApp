@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent" >
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/cat_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Missing cat name"
+            android:inputType="text"
+            android:padding="20dp" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/cat_description_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Missing cat description"
+            android:inputType="text"
+            android:padding="20dp" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/cat_place_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Missing cat place"
+            android:inputType="text"
+            android:padding="20dp" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/cat_reward_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="return of cat reward"
+            android:inputType="number"
+            android:padding="20dp" >
+        </EditText>
+        <!--
+   <EditText
+       android:id="@+id/cat_user_id_input"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="The cat's user id"
+       android:inputType="text"
+       android:padding="15dp">
+   </EditText>
+   -->
+
+        <DatePicker
+            android:id="@+id/cat_date_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:datePickerMode="calendar" />
+
+        <EditText
+            android:id="@+id/cat_picture_url_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cat picture"
+            android:inputType="text"
+            android:padding="20dp" >
+        </EditText>
+        
+        <Button
+            android:id="@+id/button_create_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost cat report" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+

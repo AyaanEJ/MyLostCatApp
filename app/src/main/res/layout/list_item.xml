@@ -23,18 +23,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/missing_cat_headline"
+            android:text="missing_cat_headline"
             android:textStyle="bold" />
 
-        <androidx.legacy.widget.Space
+        <Space
             android:layout_width="0dp"
             android:layout_height="20dp" />
+
+        <!--androidx.legacy.widget.Space
+            android:layout_width="0dp"
+            android:layout_height="20dp" /-->
 
         <TextView
             android:id="@+id/textview_list_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/single_cat_card_placeholder"
+            android:text="single_cat_placeholder"
             android:textStyle="italic" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

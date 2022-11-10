@@ -9,7 +9,6 @@ import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-//import com.example.mylostcatapp.Fragments.CatListFragmentDirections
 
 
 class MyAdapter<T>(

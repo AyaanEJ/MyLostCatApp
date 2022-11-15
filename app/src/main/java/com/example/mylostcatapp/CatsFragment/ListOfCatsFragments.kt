@@ -42,6 +42,12 @@ class ListOfCatsFragments : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
 
+
+        binding.buttonCreateCat.setOnClickListener {
+            findNavController().navigate(R.id.action_ListOfCatsFragment_to_createFragment)
+        }
+       /* binding.buttonLogin.setOnClickListener{findNavController().navigate(R.id.action_FirstFragment_to_loginFragment)}*/
+
         authenticationViewModel.userMutableLiveData.observe(viewLifecycleOwner) { firebaseUser ->
           if (firebaseUser != null) {
               binding.buttonCreateCat.visibility = View.VISIBLE
@@ -75,12 +81,7 @@ class ListOfCatsFragments : Fragment() {
         }
 
         // when create cat button is clicked, move to create cat fragment
-        binding.buttonCreateCat.setOnClickListener {
-                findNavController().navigate(R.id.action_ListOfCatsFragment_to_createFragment)
-            }
         }
-
-
         override fun onDestroyView() {
             super.onDestroyView()
             _binding = null

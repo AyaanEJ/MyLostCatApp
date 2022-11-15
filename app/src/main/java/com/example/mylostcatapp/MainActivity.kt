@@ -56,11 +56,11 @@ class MainActivity : AppCompatActivity() {
                     menuItemLogOut.isVisible = true
                 }
             }
-            if (FirebaseAuth.getInstance().currentUser == null) {
+           /* if (FirebaseAuth.getInstance().currentUser == null) {
                 // TODO does not update after login: need observable property (ViewModel)
                 val menuItem = menu.findItem(R.id.action_logout)
                 menuItem.isVisible = false
-            }
+            }*/
             return true
         }
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -69,30 +69,34 @@ class MainActivity : AppCompatActivity() {
             // as you specify a parent activity in AndroidManifest.xml.
 
             return when (item.itemId) {
-                R.id.action_settings -> true
+                //R.id.action_settings -> true
                 R.id.action_login -> {
                     val navController = findNavController(R.id.nav_host_fragment_content_main)
                     navController.navigate(R.id.loginFragment)
                     true
+
                 }
                 // TODO: how do I get the "Create cat" button to go away when a logout happens?
                 R.id.action_logout -> {
                     if (authenticationViewModel.userMutableLiveData.value != null) {
                         authenticationViewModel.signOut()
+                        Snackbar.make(binding.root, "you are now signed out", Snackbar.LENGTH_LONG).show()
                         val navController = findNavController(R.id.nav_host_fragment_content_main)
+
                         navController.popBackStack(R.id.catlistfragment, false)
                     } else {
                         Snackbar.make(binding.root, "Cannot sign out", Snackbar.LENGTH_LONG).show()
                     }
-                    /*
-                    if (Firebase.auth.currentUser != null) {
+
+                 /* if (Firebase.auth.currentUser != null) {
                         Firebase.auth.signOut()
                         val navController = findNavController(R.id.nav_host_fragment_content_main)
-                        navController.popBackStack(R.id.catlistfragment, false)
+                      Snackbar.make(binding.root, "you are now signed out", Snackbar.LENGTH_LONG).show()
+                        navController.popBackStack(R.id.ListOfCatsFragment, false)
                     } else {
-                        Snackbar.make(binding.root, "Cannot sign out", Snackbar.LENGTH_LONG).show()
-                    }
-                     */
+                       Snackbar.make(binding.root, "Cannot sign out", Snackbar.LENGTH_LONG).show()
+
+                    }*/
                     true
                 }
                 else -> super.onOptionsItemSelected(item)

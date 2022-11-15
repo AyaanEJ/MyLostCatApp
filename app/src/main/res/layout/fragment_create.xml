@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
@@ -46,20 +47,20 @@
                 android:id="@+id/cat_reward_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="return of cat reward"
+                android:hint="Reward"
                 android:inputType="number"
                 android:padding="15dp" >
             </EditText>
-            <!--
-       <EditText
+            <!--     -->
+       <!--<EditText
            android:id="@+id/cat_user_id_input"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="The cat's user id"
            android:inputType="text"
            android:padding="15dp">
-       </EditText>
-       -->
+       </EditText>-->
+
             <DatePicker
                 android:id="@+id/cat_date_input"
                 android:layout_width="match_parent"
@@ -74,14 +75,21 @@
                 android:layout_height="wrap_content"
                 android:hint="Cat picture"
                 android:inputType="text"
-                android:padding="15dp" >
+                android:padding="15dp"
+                tools:ignore="TextFields">
             </EditText>
 
             <Button
                 android:id="@+id/button_create_cat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Lost cat report" />
+                android:text="Post Cat" />
+
+            <Button
+                android:id="@+id/button_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back" />
 
         </LinearLayout>
 

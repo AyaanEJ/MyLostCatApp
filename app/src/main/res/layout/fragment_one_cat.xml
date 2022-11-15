@@ -7,11 +7,21 @@
     android:orientation="vertical"
     tools:context=".CatsFragment.OneCatFragment">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
     <TextView
         android:id="@+id/cat_presentation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/one_cat_textview_plaveholder"
+        android:text="@string/one_cat_textview_placeholder"
         android:clickable="true"
         android:textSize="25dp" >
     </TextView>
@@ -50,4 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_second" />
 
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

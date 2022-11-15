@@ -58,12 +58,12 @@ class OneCatFragment : Fragment() {
         }
 
         binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().popBackStack()
         }
 
-        binding.catPresentation.setOnClickListener {
+       /* binding.catPresentation.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-        }
+        }*/
 
         binding.buttonDeleteCat.setOnClickListener {
             // TODO: Why does list of cats not auto-update when a cat is deleted?
@@ -90,8 +90,8 @@ class OneCatFragment : Fragment() {
         private fun doIt(ev1: MotionEvent, ev2: MotionEvent) {
             val xDiff = ev2.x - ev1.x
             if (xDiff > 0) {
-                findNavController() // inner keyword on MyGesture Listener
-                    .navigate(R.id.action_SecondFragment_to_FirstFragment)
+                findNavController().popBackStack()
+
             }
         }
     }

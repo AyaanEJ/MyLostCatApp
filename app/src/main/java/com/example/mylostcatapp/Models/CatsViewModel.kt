@@ -19,6 +19,8 @@ class CatsViewModel : ViewModel() {
         reload()
     }
 
+
+    //private??
     fun reload() {
         repository.getCats()
     }

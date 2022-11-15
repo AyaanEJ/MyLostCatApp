@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    android:label="Cat List"
     app:startDestination="@id/ListOfCatsFragment">
 
     <fragment
@@ -20,16 +21,16 @@
         <action
             android:id="@+id/action_ListOfCatsFragment_to_createFragment"
             app:destination="@id/createFragment" />
+        <!--<action
+            android:id="@+id/action_ListOfCatsFragment_to_createFragment2"
+            app:destination="@id/createFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/OneCatFragment"
         android:name="com.example.mylostcatapp.CatsFragment.OneCatFragment"
-        android:label="@string/"
+        android:label="Cat information"
         tools:layout="@layout/fragment_one_cat">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/ListOfCatsFragment" />
         <argument
             android:name="position"
             app:argType="integer" />
@@ -37,8 +38,8 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.mylostcatapp.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_FirstFragment"
             app:destination="@id/ListOfCatsFragment" />
@@ -46,7 +47,11 @@
     <fragment
         android:id="@+id/createFragment"
         android:name="com.example.mylostcatapp.CreateFragment"
-        android:label="fragment_create2"
-        tools:layout="@layout/fragment_create" />
+        android:label="Create Cat"
+        tools:layout="@layout/fragment_create">
+        <action
+            android:id="@+id/action_createFragment_to_ListOfCatsFragment"
+            app:destination="@id/ListOfCatsFragment" />
+    </fragment>
 
 </navigation>

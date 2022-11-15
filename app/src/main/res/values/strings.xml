@@ -14,11 +14,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="one_cat_imageview_placeholder" >MANGLER TEKST</string>
+    <string name="one_cat_imageview_placeholder" > text </string>
     <string name="delete_cat">Delete Cat</string>
-    <string name="report_missing_cat">Report missing cat</string>
+    <string name="report_missing_cat">Create Cat</string>
     <string name="log_out_menu_item_label">Logout</string>
     <string name="log_in">Log in</string>
     <string name="button_back_to_cat_list_fragment_label">List of cats</string>
-    <string name="one_cat_textview_plaveholder">cat presentation</string>
+    <string name="one_cat_textview_placeholder">cat presentation</string>
+    
+    <string name="cat_picture_url_input">Cat picture</string>
+    <string name="button_create_cat" >Post Cat</string>
+    <string name="missing_cat_headline">missing cat</string>
 </resources>

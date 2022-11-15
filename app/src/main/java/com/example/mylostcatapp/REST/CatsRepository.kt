@@ -72,6 +72,7 @@ class CatsRepository {
                 if (response.isSuccessful) {
                     Log.d("APPLE", "Deleted: " + response.body())
                     updateMessageLiveData.postValue("Updated: " + response.body())
+                    getCats()
                 } else {
                     val message = response.code().toString() + " " + response.message()
                     errorMessageLiveData.postValue(message)

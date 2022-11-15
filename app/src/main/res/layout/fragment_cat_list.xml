@@ -19,6 +19,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button_create_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/report_missing_cat"
+                android:visibility="gone">
+            </Button>
+
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -26,14 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true" />
-
-    <Button
-        android:id="@+id/button_create_cat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/report_missing_cat"
-        android:visibility="gone">
-    </Button>
 
         </LinearLayout>
     </ScrollView>

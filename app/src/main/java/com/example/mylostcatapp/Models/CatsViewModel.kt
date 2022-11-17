@@ -25,6 +25,7 @@ class CatsViewModel : ViewModel() {
         repository.getCats()
     }
 
+    // get specific cat
     operator fun get(index: Int): Cat? {
         return catsLiveData.value?.get(index)
     }
@@ -36,5 +37,30 @@ class CatsViewModel : ViewModel() {
     fun delete(id: Int) {
         repository.deleteCat(id)
     }
+    fun sortByReward() {
+        repository.sortByReward()
+    }
 
+    //sorting methods
+    fun sortByRewardDescending() {
+        repository.sortByRewardDescending()
+    }
+
+    fun sortByDate() {
+        repository.sortByDate()
+    }
+
+    fun sortByDateDescending() {
+        repository.sortByDateDescending()
+    }
+
+    // filtering methods
+    fun filterByPlace(place: String) {
+        repository.filterByPlace(place)
+    }
+
+    fun filterByReward(reward: Int) {
+        repository.filterByReward(reward)
+    }
 }
+

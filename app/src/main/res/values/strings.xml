@@ -25,4 +25,16 @@
     <string name="cat_picture_url_input">Cat picture</string>
     <string name="button_create_cat" >Post Cat</string>
     <string name="missing_cat_headline">missing cat</string>
+
+    <array name="sortings">
+        <item>Reward ascending</item>
+        <item>Reward descending</item>
+        <item>Least recent date</item>
+        <item>Most recent date</item>
+    </array>
+
+    <array name="filterings">
+        <item>Reward</item>
+        <item>Place</item>
+    </array>
 </resources>

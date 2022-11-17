@@ -85,4 +85,38 @@ class CatsRepository {
             }
         })
     }
+    // Sorting functions
+    fun sortByReward() {
+        catsLiveData.value = catsLiveData.value?.sortedBy { it.reward }
+    }
+
+    fun sortByRewardDescending() {
+        catsLiveData.value = catsLiveData.value?.sortedByDescending { it.reward }
+    }
+
+    fun sortByDate() {
+        catsLiveData.value = catsLiveData.value?.sortedBy { it.date }
+    }
+
+    fun sortByDateDescending() {
+        catsLiveData.value = catsLiveData.value?.sortedByDescending { it.date }
+    }
+
+    // filtering function
+    fun filterByPlace(place: String) {
+        if (place.isBlank()) {
+            getCats()
+        } else {
+            catsLiveData.value = catsLiveData.value?.filter {cat -> cat.place.contains(place)}
+        }
+    }
+
+    fun filterByReward(reward: Int) {
+        if (reward <= 0) {
+            getCats()
+        } else {
+            catsLiveData.value = catsLiveData.value?.filter { cat -> cat.reward >= reward }
+        }
+    }
 }
+

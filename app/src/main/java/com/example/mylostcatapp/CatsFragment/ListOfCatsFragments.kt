@@ -2,6 +2,8 @@ package com.example.mylostcatapp.CatsFragment
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.text.InputType.TYPE_CLASS_NUMBER
+import android.text.InputType.TYPE_CLASS_TEXT
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,7 +44,7 @@ class ListOfCatsFragments : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
 
-
+        // when create cat button is clicked, move to create cat fragment
         binding.buttonCreateCat.setOnClickListener {
             findNavController().navigate(R.id.action_ListOfCatsFragment_to_createFragment)
         }
@@ -79,8 +81,35 @@ class ListOfCatsFragments : Fragment() {
                 binding.recyclerView.adapter = adapter
             }
         }
+        binding.buttonSort.setOnClickListener {
+            when(binding.spinnerSorting.selectedItemPosition) {
+                0 -> catsViewModel.sortByReward()
+                1 -> catsViewModel.sortByRewardDescending()
+                2 -> catsViewModel.sortByDate()
+                3 -> catsViewModel.sortByDateDescending()
+            }
+        }
 
-        // when create cat button is clicked, move to create cat fragment
+        binding.filterParameter.setOnClickListener {
+            binding.filterParameter.text.clear()
+            when (binding.spinnerFiltering.selectedItemPosition) {
+                0 -> binding.filterParameter.inputType = TYPE_CLASS_NUMBER
+                1 -> binding.filterParameter.inputType = TYPE_CLASS_TEXT
+            }
+        }
+        binding.buttonFilter.setOnClickListener {
+            val filterParameter = binding.filterParameter.text.toString().trim()
+            if (filterParameter.isEmpty()) {
+                binding.filterParameter.error = "Write something!"
+                return@setOnClickListener
+            }
+            when (binding.spinnerFiltering.selectedItemPosition) {
+                0 -> catsViewModel.filterByReward(filterParameter.toInt())
+                1 -> catsViewModel.filterByPlace(filterParameter)
+            }
+        }
+
+
         }
         override fun onDestroyView() {
             super.onDestroyView()

@@ -87,8 +87,6 @@ class CreateFragment : Fragment() {
     companion object {
         //@jvmStatic
 
-
-
         fun newInstance(param1: String, param2: String) =
             CreateFragment().apply {
                 arguments = Bundle().apply {
@@ -96,5 +94,5 @@ class CreateFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+        }
     }
-}
